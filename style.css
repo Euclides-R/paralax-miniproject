@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(#2b1055, #7597de);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: hidden;
+  width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2b1055;
+  border-radius: 20px;
+  border: 1px solid rgb(90, 90, 90);
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  padding: 30px 100px;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header ul li a {
+  color: #fff;
+  padding: 6px 15px;
+  text-decoration: none;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  border-radius: 20px;
+  color: #2b1055;
+}
+
+section {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px;
+  position: relative;
+  width: 100%;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 1000;
+}
+
+section img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+section img#moon {
+  mix-blend-mode: screen;
+}
+
+section img#mountains_front {
+  z-index: 10;
+}
+
+/* Id's */
+
+#text {
+  color: #fff;
+  font-size: 7.5vw;
+  position: absolute;
+  right: -350px;
+  white-space: nowrap;
+  z-index: 9;
+}
+
+/* #btn {
+  background: #fff;
+  border-radius: 40px;
+  color: #2b1055;
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 8px 30px;
+  text-decoration: none;
+  z-index: 8;
+} */
+
+/* Class */
+
+.animation {
+  align-items: center;
+  background-color: #2b1055;
+  border-radius: 40px;
+  display: flex;
+  font-size: larger;
+  height: 70px;
+  justify-content: center;
+  width: 120px;
+  overflow: hidden;
+  position: relative;
+  top: 100px;
+  z-index: 8;
+}
+
+.animation::before {
+  animation: rotate 2s linear infinite;
+  background-image: conic-gradient(#fff 20deg, transparent 90deg);
+  content: "";
+  height: 300%;
+  position: absolute;
+  width: 100%;
+}
+
+.animation::after {
+  align-items: center;
+  background: #7597de;
+  border-radius: 40px;
+  color: #fff;
+  content: "Explore";
+  display: flex;
+  font-weight: 500;
+  height: 60px;
+  justify-content: center;
+  position: absolute;
+  width: 110px;
+}
+
+.sec {
+  background: #1c0522;
+  padding: 100px;
+  position: relative;
+}
+
+.sec h2 {
+  color: #fff;
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+.sec p {
+  color: #fff;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+/* Config animations */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
